@@ -1,0 +1,62 @@
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif; /* Aplicar Roboto a todos los elementos */
+}
+
+.menu {
+    position: sticky;
+    background-color: #FFFFFF;
+    height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Activar Flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Espaciar elementos: izquierda, centro, derecha */
+
+}
+
+.logo {
+    height: 150px; /* Ajustar tamaño del logo */
+    width: auto; /* Mantener proporción del logo */
+    margin-left: 170px;
+}
+
+.EnlaceSesion,.Usuario {
+    width: 61px;
+    height: 67px;
+    margin-right: 170px;
+}
+
+.menu ul {
+    display: flex; /* Hacer que los elementos del menú estén en línea */
+    justify-content: center; /* Centrar horizontalmente los enlaces */
+    flex-grow: 1; /* Permitir que el menú ocupe el espacio central */
+}
+
+.menu ul, .menu li {
+    padding: 50px;
+}
+
+
+.Item {
+    color: #000000;
+    font-size: 16px;
+    padding: 10px 20px; /* Mantener el mismo padding en ambos estados */
+    display: inline-block; /* Asegurar que el padding se aplique correctamente */
+    box-sizing: border-box; /* Incluir padding dentro del tamaño del elemento */
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+.Item:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 10px;
+    transform: scale(1.1); /* Aumentar el tamaño al 110% */
+}
