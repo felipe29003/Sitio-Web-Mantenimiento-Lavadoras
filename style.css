@@ -32,6 +32,13 @@
     height: 67px;
     margin-right: 170px;
 }
+.user-menu {
+    position: relative; /* Necesario para posicionar el menú desplegable */
+    display: flex; /* Hacer que los elementos estén en línea */
+    align-items: center; /* Centrar verticalmente los elementos */
+    gap: 10px; /* Espaciado entre los elementos */
+    cursor: pointer;
+}
 
 .menu ul {
     display: flex; /* Hacer que los elementos del menú estén en línea */
@@ -43,6 +50,19 @@
     padding: 50px;
 }
 
+.dropdown-menu {
+    display: none; /* Ocultar el menú inicialmente */
+    position: absolute; /* Posicionar el menú fuera del flujo normal */
+    top: 100%; /* Colocar el menú justo debajo de la imagen */
+    right: 45%; /* Alinearlo con el borde izquierdo del contenedor */
+    transform: translateY(9.5x); /* Permite manejar el espacio debajo de la imagen */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    z-index: 1000;
+    width: 200px;
+}
 
 .Item {
     color: #000000;
@@ -59,4 +79,35 @@
     color: #FFFFFF;
     border-radius: 10px;
     transform: scale(1.1); /* Aumentar el tamaño al 110% */
+}
+.dropdown-menu ul {
+    display: block; /* Cambiar a bloque para que los elementos se apilen verticalmente */
+    list-style: none; /* Eliminar los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+.dropdown-menu li {
+    padding: 10px 20px; /* Espaciado interno para cada elemento */
+    text-align: center; /* Alinear el texto a la izquierda */
+    width: 100%; /* Asegurar que cada elemento ocupe todo el ancho del menú */
+}
+
+.dropdown-menu li a {
+    color: #000;
+    text-decoration: none;
+    display: block; /* Asegurar que el enlace ocupe todo el ancho del elemento */
+}
+
+/* Cambiar el fondo al pasar el mouse */
+.dropdown-menu li:hover {
+    background: transparent;
+    border: 4px solid;
+    border-radius: 30px;
+    border-image: conic-gradient(
+        #4C3AEC 25%,
+        #CB17DA 58%,
+        #270E59 75%,
+        #6A169A 99%
+    )1;
+    transform: scale(1);
 }
