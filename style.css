@@ -10,6 +10,7 @@
     font-family: 'Roboto', sans-serif; /* Aplicar Roboto a todos los elementos */
 }
 
+/* Menu dinamico */
 .menu {
     position: sticky;
     top: 0; /* Fija el menú en la parte superior de la pantalla */
@@ -121,6 +122,8 @@
     transform: scale(1);
 }
 
+/* Fin menu dinamico */
+
 /* Comienzo seccion 1 */
 
 #Presentacion {
@@ -180,3 +183,97 @@
     opacity: 0.2; /* Hacer la imagen semitransparente para que no opaque el texto */
 }
     
+/* Fin seccion 1 */
+
+/* Comienzo seccion 2 */
+
+#Introduccion {
+    position: relative;
+    background-image: url("Imagenes/Imagen Seccion 2.png");
+    background-repeat: no-repeat; /* Evitar que el fondo se repita */
+    background-size: 100% 100%; /* Ajustar el fondo para que ocupe todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#Introduccion h2 img {
+    width: 120px; /* Ajustar el tamaño de la imagen */
+    height: 120px;
+}
+
+#Introduccion h2 {
+    position: absolute; /* Activar Flexbox */
+    display: flex;
+    align-items: center; /* Alinear verticalmente la imagen y el texto */
+    justify-content: flex-start; /* Alinear los elementos al inicio del contenedor */
+    color: #FCFCFC;
+    font-size: 50px; /* Ajustar el tamaño del texto */
+    gap: 30px; /* Espaciado entre la imagen y el texto */
+    padding-top: 70px;
+    padding-left: 70px;
+}
+
+#Introduccion p {
+    display: absolute;
+    display:flex;
+    text-align:center;
+    justify-content: left;
+    color: #FCFCFC;
+    font-size: 60px;
+    padding-top: 1000px;
+    padding-left: 200px;
+    padding-bottom: 25px;
+    font-weight: bolder;;
+}
+
+#Introduccion a {
+    position: absolute; /* Posicionar el enlace en relación con el contenedor */
+    bottom: 100px; /* Separación desde la parte inferior */
+    right: 150px; /* Separación desde la parte derecha */
+    background: transparent; /* Fondo transparente inicialmente */
+    color: #000000; /* Texto negro inicialmente */
+    padding: 15px 30px; /* Espaciado interno */
+    border: 10px solid #000000; /* Borde negro */
+    text-decoration: none; /* Eliminar el subrayado */
+    font-size: 30px; /* Ajustar el tamaño del texto */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el fondo y el texto */
+}
+
+#Introduccion a:hover {
+    background-color: #000000; /* Fondo negro al pasar el mouse */
+    color: #FFFFFF; /* Texto blanco al pasar el mouse */
+}
+
+#Introduccion .Sello {
+    position: absolute; /* Posicionar el sello en relación con el contenedor */
+    bottom: 300px; /* Separación desde la parte superior */
+    right: 250px; /* Alinear con el enlace */
+    width: 200px; /* Ajustar el tamaño del sello */
+    height: 150px;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Transición suave */
+}
+
+#Introduccion .Sello:hover {
+    transform: scale(2); /* Escalar el sello al pasar el mouse */
+}
+
+/* Fin Seccion 2 */
+
+#HeaderServicios {
+    position:relative;
+    background: #E9E9E9;
+    text-align: center;
+    padding-bottom:50px;
+    padding-top:50px;
+    
+}
+
+#HeaderServicios h1{
+    color:#000000;
+    font-size : 60px;
+    font-weight: lighter;
+
+}
+
