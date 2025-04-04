@@ -281,12 +281,30 @@
 
 /* Inicio Seccion 3 */
 
+#ServiciosD {
+    position: relative; /* Necesario para posicionar elementos hijos */
+    background-image: url("Imagenes/Imagen Seccion 3.png"); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 50px 0; /* Espaciado superior e inferior para que la imagen sea visible */
+}
+
 .TarjetasContainer {
     display: flex; /* Activa Flexbox */
-    gap: 20px; /* Espaciado entre las tarjetas */
+    gap: 100px; /* Espaciado entre las tarjetas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si no hay suficiente espacio */
-    margin-top: 20px; /* Espaciado superior */
+    padding-left: 50px;
+    padding-right: 50px; 
+    padding-top: 100px;
+    padding-bottom: 100px; 
+    background-color: rgba(255, 255, 255, 0.35); /* Fondo blanco con opacidad del 90% */
+    border-radius: 20px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    max-width: 2000px;
+    max-height: 4000px ;
+    margin: 0 auto; /* Centra el contenedor dentro de #ServiciosD */
 }
 
 .Tarjeta1 {
@@ -321,6 +339,7 @@
     border-top-left-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 }
+
 
 .Tarjeta1 .Descripcion {
     height: 200px;
@@ -366,8 +385,107 @@
 }
 
 .segunda-tarjeta {
-    margin-top: 20px; /* Ajusta este valor para mover la tarjeta hacia abajo */
+    margin-top : 270px;
 }
+
+.cuarta-tarjeta {
+    margin-top : 270px;
+}
+
+.segunda-tarjeta .head .imagen img {
+    width: auto; /* Ajustar al ancho del contenedor */
+    height: auto; /* Mantener proporciones */
+    object-fit: contain; /* Asegura que toda la imagen sea visible sin recortarse */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+
+.segunda-tarjeta .Descripcion {
+    padding: 20px; /* Espaciado interno uniforme */
+    text-align: justify; /* Justificar el texto para una mejor alineación */
+    font-size: 16px; /* Ajustar el tamaño del texto */
+    line-height: 1.6; /* Mejorar la legibilidad */
+    color: #333333; /* Color del texto */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+.segunda-tarjeta .Conocer a {
+    margin-top: -50px;
+}
+
+.tercera-tarjeta .Descripcion {
+    padding: 20px; /* Espaciado interno uniforme */
+    text-align: justify; /* Justificar el texto para una mejor alineación */
+    font-size: 16px; /* Ajustar el tamaño del texto */
+    line-height: 1.6; /* Mejorar la legibilidad */
+    color: #333333; /* Color del texto */
+    margin-top: 40px; /* Espaciado superior */
+}
+
+.tercera-tarjeta .Conocer a {
+    margin-top: -50px;
+}
+
+/* Ajuste específico para la cuarta tarjeta */
+.cuarta-tarjeta .head .imagen img {
+    width: 372px; /* Ajustar al ancho del contenedor */
+    height: auto; /* Mantener proporciones */
+    object-fit: contain; /* Asegura que toda la imagen sea visible sin recortarse */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Fin Seccion 3 */
+
+/* Header Servicios destacados */
+#ReparacionHeader {
+    position:relative;
+    background: #E9E9E9;
+    text-align: center;
+    padding-bottom:50px;
+    padding-top:50px;
+    
+}
+
+#ReparacionHeader h1{
+    color:#000000;
+    font-size : 60px;
+    font-weight: lighter;
+
+}
+/* Fin header Servicios destacados */
+
+/* Inicio Patrocinios */
+#Patrocinios {
+    background-color: #F2F2F2;
+    padding-left:400px;
+    padding-right:400px;
+    padding-top:-5px ;
+    padding-bottom:-5px ;
+}
+
+#Patrocinios .ImagenesPatrocinios {
+    position: relative;
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Espaciado uniforme entre las imágenes */
+    align-items: center; /* Centra las imágenes verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas si no hay suficiente espacio */
+    gap: 40px; /* Espaciado entre las imágenes */
+}
+
+#Patrocinios .ImagenesPatrocinios img {
+    width: 300px; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene las proporciones originales */
+    opacity: 0.6; 
+}
+/* Fin Patrocinios */
+
+
+
+
+
+
+
+
 
 
 
