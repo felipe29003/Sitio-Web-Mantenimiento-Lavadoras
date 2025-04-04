@@ -281,6 +281,14 @@
 
 /* Inicio Seccion 3 */
 
+.TarjetasContainer {
+    display: flex; /* Activa Flexbox */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si no hay suficiente espacio */
+    margin-top: 20px; /* Espaciado superior */
+}
+
 .Tarjeta1 {
     position: relative;
     width: 300px;
@@ -355,6 +363,10 @@
     font-size: 16px;
     font-weight: bold;
     margin-top: -1px;
+}
+
+.segunda-tarjeta {
+    margin-top: 20px; /* Ajusta este valor para mover la tarjeta hacia abajo */
 }
 
 
