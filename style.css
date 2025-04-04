@@ -299,7 +299,7 @@
     padding-right: 50px; 
     padding-top: 100px;
     padding-bottom: 100px; 
-    background-color: rgba(255, 255, 255, 0.35); /* Fondo blanco con opacidad del 90% */
+    background-color: rgba(255, 255, 255, 0.35); /* Fondo blanco con opacidad del 35% */
     border-radius: 20px; /* Bordes redondeados para el contenedor */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
     max-width: 2000px;
@@ -475,9 +475,128 @@
 #Patrocinios .ImagenesPatrocinios img {
     width: 300px; /* Ajusta el ancho de las imágenes */
     height: auto; /* Mantiene las proporciones originales */
-    opacity: 0.6; 
+    opacity: 0.6; /* opacidad */
 }
-/* Fin Patrocinios */
+/* Fin Patrocinios*/
+
+/* Inicio Seccion 4 */
+
+#Reparacion{
+    background-image: url("Imagenes/reparacion-lavadoras img.png"); 
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 50px 0; /* Espaciado superior e inferior para que la imagen sea visible */
+}
+
+#Reparacion .Reparacioncontainer {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    padding-left:100px ;
+    padding-right:100px ;
+    padding-bottom:100px ;
+    padding-top:100px ;
+    gap: 250px; /* Espaciado entre las tarjetas */
+    background-color:rgba(255, 255, 255, 0.19);
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    border-style: solid;;
+    border-color: #000000;
+    border-width: 4px;
+    border-radius: 30px;
+    margin:0 auto;
+    max-width: 2000px;
+    max-height: 3000px;
+    margin-top: 70px;
+    margin-bottom:70px;
+    
+}
+
+#Reparacion .Reparacioncontainer .imglav {
+    width: 300px; /* Permite que la imagen mantenga su proporción */
+    height: auto; /* Mantiene las proporciones originales */
+    max-height: 300px; /* Limita la altura máxima a 300px */
+    border-radius: 15px; /* Bordes redondeados más ajustados */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Sombra difusa */
+    background-color: #ffffff; /* Fondo blanco para el contorno */
+    padding: 5px; /* Espaciado interno más ajustado para el contorno */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    transition: transform 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+#Reparacion .Reparacioncontainer  .nodis {
+    font-size: 24px; /* Ajustar el tamaño del texto */
+    background-color: #000000; /* fondo negro */
+    color: #ffffff; /* color blanco texto */
+    border-radius: 10px; /* bordes del texto redondeados */
+    padding: 20px; /* espaciado interno del texto */
+    text-align: center; /* Centra el texto */
+    opacity: 0; /* oculta el texto */
+    transform: translateY(10px); /* texto abajo */
+    transition: transform 0.3s ease; /* transicion*/
+}
+
+#Reparacion .Reparacioncontainer .Tipolavadora:hover .nodis,
+#Reparacion .Reparacioncontainer .Tipolavadora2:hover .nodis,
+#Reparacion .Reparacioncontainer .Tipolavadora3:hover .nodis,
+#Reparacion .Reparacioncontainer .Tipolavadora4:hover .nodis,
+#Reparacion .Reparacioncontainer .Tipolavadora5:hover .nodis,
+#Reparacion .Reparacioncontainer .Tipolavadora6:hover .nodis    {
+    opacity: 1; /* opacidad 100% cuando el usuario pasa el cursor por el div .Tipolavadora */
+    transform: translateY(0); /*posicion original del texto */
+}
+
+#Reparacion .Reparacioncontainer .Tipolavadora,
+#Reparacion .Reparacioncontainer .Tipolavadora2,
+#Reparacion .Reparacioncontainer .Tipolavadora3,
+#Reparacion .Reparacioncontainer .Tipolavadora4,
+#Reparacion .Reparacioncontainer .Tipolavadora5,
+#Reparacion .Reparacioncontainer .Tipolavadora6 {
+    position: relative;
+    width: 300px; /* ancho de 300 pixeles */
+    display: flex; /* flexbox */
+    flex-direction: column; /* coloca los elementos en formato columna */
+    align-items: center; /* centra los elementos*/
+    text-align: center; /* centra el texto */
+    gap: 30px; /* espacio entre la imagen y el texto */
+}
+
+/* Fin Seccion 4 */
+
+/* Header Seccion 5 */
+
+#HeaderUbicacion {
+    background: #E9E9E9; 
+    max-height: 300px;
+    text-align: center; 
+    overflow:hidden;
+}
+
+#HeaderUbicacion div {
+    position: relative;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;   
+    bottom:70px;
+    right:20px;
+}
+
+#HeaderUbicacion img {
+    width: 400px; 
+    height: auto; 
+    max-height: height 150px;
+    object-fit:contain
+}
+
+#HeaderUbicacion h1 {
+    color: #000000; 
+    font-size: 48px; 
+    font-weight: lighter; 
+}
+
+
+
 
 
 
