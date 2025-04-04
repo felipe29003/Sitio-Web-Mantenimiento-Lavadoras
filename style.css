@@ -261,6 +261,7 @@
 
 /* Fin Seccion 2 */
 
+/* Header Servicios destacados */
 #HeaderServicios {
     position:relative;
     background: #E9E9E9;
@@ -276,4 +277,85 @@
     font-weight: lighter;
 
 }
+/* Fin header Servicios destacados */
+
+/* Inicio Seccion 3 */
+
+.Tarjeta1 {
+    position: relative;
+    width: 300px;
+    height: 540px;
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.Tarjeta1:hover {
+    background: rgb(208,206,206);
+    background: linear-gradient(90deg, rgba(208,206,206,1) 0%, rgba(119,118,118,1) 91%); 
+}
+
+.Tarjeta1 .head {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    display: flex; /* Asegura que el contenido esté centrado */
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5; /* Fondo claro para la cabecera */
+}
+
+.Tarjeta1 .head img {
+    width: 100%; /* Ajustar al ancho del contenedor */
+    height: auto; /* Mantener proporciones */
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+}
+
+.Tarjeta1 .Descripcion {
+    height: 200px;
+    padding-top:50px ; /* Espaciado interno uniforme */
+    padding-left: 20px; ;
+    padding-right:20px ;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciado entre los elementos */
+}
+
+.Tarjeta1 .Descripcion h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000; /* Texto oscuro */
+    margin-bottom: 10px; /* Espaciado inferior */
+    text-align: left;
+}
+
+.Tarjeta1 .Descripcion p {
+    font-size: 16px;
+    color: #0a0a0a; /* Texto gris */
+    line-height: 1.5; /* Mejorar la legibilidad */
+    text-align: left;
+}
+
+.Tarjeta1 .Conocer {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.Tarjeta1 .Conocer a {
+    display: inline-block;
+    color: #000000; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration:underline; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -1px;
+}
+
+
 
