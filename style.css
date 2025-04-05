@@ -769,6 +769,64 @@
 
 /* Fin seccion 6 */
 
+/* Inicio Footer */
+
+.Foot {
+    background: #BDDCFF; 
+}
+
+.Foot .FootHeader {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-left:100px ;
+    padding-right:100px ;
+    
+    
+}
+
+.Foot .FootHeader .LogoFoot {
+    flex: 1; 
+    display : flex;
+    justify-content: flex-start;  
+}
+
+.Foot .FootHeader .LogoFoot img {
+    width: 350px; 
+    height: auto; 
+    margin-left:150px;
+}
+
+.Foot .FootHeader .Nombreempresa {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+}
+
+.Foot .FootHeader .Nombreempresa p {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 100px;
+}
+
+.Foot .FootHeader .RedesSociales {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+    gap: 100px; 
+}
+
+.Foot .FootHeader .RedesSociales img {
+    width: 70px; 
+    height: auto; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
+    border-radius: 10px; 
+}
+
+
+
 
 
 
