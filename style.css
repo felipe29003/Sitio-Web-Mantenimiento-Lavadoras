@@ -597,7 +597,7 @@
 
 /* Fin Header Seccion 5 */
 
-
+/* Inicio seccion 5 */
 #Ubicacion .ContainerUbicacion .Location1 {
     position: relative;
     display: flex; /* Activa Flexbox */
@@ -667,25 +667,107 @@
 }
 
 #Ubicacion .ContainerUbicacion .Location1 .localimagen img {
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    height: 100%; /* Ajusta la imagen a la altura del contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+    width: 100%; /* Ajusta la imagen al ancho del contenedor.localimagen  */
+    height: 100%; /* Ajusta la imagen al alto del contenedor.localimagen */
+    object-fit: cover; /* se asegura que cubra el contenedor entero */
     border-radius: 50%; /* Hace que la imagen sea circular */
 }
 
 #Ubicacion .ContainerUbicacion .Location1 .Direccion {
     font-size: 40px;
-    text-align: center; /* Centra el texto */
+    text-align: center; 
     flex: 1; /* Asegura que este elemento ocupe espacio proporcional */
-    display: flex; /* Activa Flexbox */
-    align-items: center; /* Centra el texto verticalmente */
-    justify-content: center; /* Centra el texto horizontalmente */
-    margin-left:120px;
-    order:3;
+    display: flex; /* Flexbox*/
+    align-items: center; /* Centra el texto */
+    justify-content: center; /* Centra el texto  */
+    margin-left:120px; /* mueve 120px a la izquierda el objeto direccion  */
+    order:3; /* mueve 120px a la izquierda el objeto direccion  */
+}
+
+/* Fin seccion 5 */
+
+/* Inicio Header seccion 6 */
+#SobreNosotros {
+    position:relative;
+    background: #F1F0F0;
+    text-align: center;
+    padding-bottom:50px;
+    padding-top:50px;
+    
 }
 
 
+#SobreNosotros h1{
+    color:#000000;
+    font-size : 60px;
+    font-weight: lighter;
 
+}
+/* Fin Header seccion 6 */
+
+/* Inicio Seccion 6 */
+
+#QuienesSomos {
+    position: relative;
+    background-image: url("Imagenes/Imagen seccion 6.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 50px 20px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#QuienesSomos .ContentContainer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    gap: 20px; 
+}
+
+#QuienesSomos .ImagesContainer {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 0px; 
+    flex: 1; 
+}
+
+#QuienesSomos .ImagesContainer img {
+    width: 500px; 
+    height: auto; 
+}
+
+#QuienesSomos .Textcontainer {
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.70);
+    padding: 50px;
+    max-width: 900px; 
+    width: 100%; 
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+}
+
+#QuienesSomos .Textcontainer p {
+    font-size: 35px; 
+    font-weight: 900; 
+}
+
+#QuienesSomos .ImagesContainer .Imagen1 {
+    margin-left: -150px; 
+}
+
+#QuienesSomos .ImagesContainer .Imagen2 {
+    margin-right: -70px; 
+}
+
+/* Fin seccion 6 */
 
 
 
