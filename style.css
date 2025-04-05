@@ -782,8 +782,6 @@
     align-items: center; 
     padding-left:100px ;
     padding-right:100px ;
-    
-    
 }
 
 .Foot .FootHeader .LogoFoot {
@@ -824,6 +822,38 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
     border-radius: 10px; 
 }
+
+.Foot hr {
+    background: rgb(51,18,18);
+    background: linear-gradient(90deg, rgba(51,18,18,1) 0%, rgba(235,200,200,1) 51%, rgba(1,0,0,1) 100%);
+    height: 6.5px;
+    border-radius:30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.FootSection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:55px ;
+    padding-bottom:100px ;
+
+}
+
+.FootSection div {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    align-items: center;
+}
+
+
+.FootSection div a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
 
 
 
