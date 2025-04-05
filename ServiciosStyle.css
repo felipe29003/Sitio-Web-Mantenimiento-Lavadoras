@@ -108,7 +108,6 @@
     display: block; /* Asegurar que el enlace ocupe todo el ancho del elemento */
 }
 
-/* Cambiar el fondo al pasar el mouse */
 .dropdown-menu li:hover {
     background: transparent;
     border: 4px solid;
@@ -122,13 +121,14 @@
     transform: scale(1);
 }
 
-
+/* Inicio header tecnicos */
 #HeaderTecnicos {
     position:relative;
     background: #000000;
     text-align: center;
-    padding-bottom:50px;
-    padding-top:50px;
+    padding-bottom:40px;
+    padding-top:40px;
+    overflow: hidden;
     
 }
 
@@ -136,5 +136,82 @@
     color:#ffffff;
     font-size : 60px;
     font-weight: lighter;
-
 }
+
+/* Fin Header Tecnicos */
+
+/* Inicio Seccion 1 */
+
+.TecnicosContainer{
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 55px;
+    padding-right: 160px ;
+    padding-top:100px ;
+    padding-bottom:100px;
+}
+
+.TarjetaTecnico {
+    position: relative;
+    display: flex;
+    flex-direction: row; /* Coloca la imagen y el texto en fila */
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaciado entre la imagen del técnico y el texto */
+    padding: 20px; /* Espaciado interno para la tarjeta */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+}
+
+.TarjetaTecnico .TecnicoImagen {
+    position: relative;
+    width: 250px; /* Tamaño imagen tecnico*/
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%; /* Imagen circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TarjetaTecnico .TecnicoImagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+}
+
+.TarjetaTecnico .TecnicoTexto {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Coloca el texto y las estrellas en columna */
+    gap: 15px; /* Espaciado entre los elementos del texto */
+    max-width: 600px; /* Limita el ancho máximo del texto */
+}
+
+.TarjetaTecnico .TecnicoTexto h2 {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #000000; /* Color del texto */
+}
+
+.TarjetaTecnico .TecnicoTexto p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Color del texto */
+    margin-top:20px;
+}
+
+.TarjetaTecnico .TecnicoTexto img {
+    width: 400px; /* Ajusta el tamaño de la imagen de estrellas */
+    height: auto;
+    align-self: flex-start; 
+}
+
+/*Fin Seccion 1 */
+
+
+
+
+
