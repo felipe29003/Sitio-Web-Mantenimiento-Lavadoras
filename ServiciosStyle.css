@@ -1,0 +1,140 @@
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif; /* Aplicar Roboto a todos los elementos */
+}
+
+/* Menu dinamico */
+.menu {
+    position: sticky;
+    top: 0; /* Fija el menú en la parte superior de la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    background-color: #FFFFFF; /* Asegura que el fondo sea visible */
+    height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Activar Flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Espaciar elementos: izquierda, centro, derecha */
+}
+
+
+.logo {
+    height: 150px; /* Ajustar tamaño del logo */
+    width: auto; /* Mantener proporción del logo */
+    margin-left: 170px;
+}
+
+.EnlaceSesion,.Usuario {
+    width: 61px;
+    height: 67px;
+    margin-right: 170px;
+}
+.user-menu {
+    position: relative; /* Necesario para posicionar el menú desplegable */
+    display: flex; /* Hacer que los elementos estén en línea */
+    align-items: center; /* Centrar verticalmente los elementos */
+    gap: 10px; /* Espaciado entre los elementos */
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu ul {
+    display: flex; /* Hacer que los elementos del menú estén en línea */
+    justify-content: center; /* Centrar horizontalmente los enlaces */
+    flex-grow: 1; /* Permitir que el menú ocupe el espacio central */
+}
+
+.menu ul, .menu li {
+    padding: 50px;
+}
+
+.dropdown-menu {
+    display: none; /* Ocultar el menú inicialmente */
+    position: absolute; /* Posicionar el menú fuera del flujo normal */
+    top: 100%; /* Colocar el menú justo debajo de la imagen */
+    right: 45%; /* Alinearlo con el borde izquierdo del contenedor */
+    transform: translateY(9.5x); /* Permite manejar el espacio debajo de la imagen */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    z-index: 9999;
+    width: 200px;
+}
+
+.Item {
+    color: #000000;
+    font-size: 16px;
+    padding: 10px 20px; /* Mantener el mismo padding en ambos estados */
+    display: inline-block; /* Asegurar que el padding se aplique correctamente */
+    box-sizing: border-box; /* Incluir padding dentro del tamaño del elemento */
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+
+.Item:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 10px;
+    transform: scale(1.1); /* Aumentar el tamaño al 110% */
+}
+.dropdown-menu ul {
+    display: block; /* Cambiar a bloque para que los elementos se apilen verticalmente */
+    list-style: none; /* Eliminar los puntos de la lista*/
+    margin: 0;
+    padding: 0;
+}
+.dropdown-menu li {
+    padding: 10px 20px; /* Espaciado interno para cada elemento */
+    text-align: center; /* Alinear el texto a la izquierda */
+    width: 100%; /* Asegurar que cada elemento ocupe todo el ancho del menú */
+}
+
+.dropdown-menu li img{
+    width:50px; 
+    height:50px;
+}
+
+.dropdown-menu li a {
+    color: #000;
+    text-decoration: none;
+    display: block; /* Asegurar que el enlace ocupe todo el ancho del elemento */
+}
+
+/* Cambiar el fondo al pasar el mouse */
+.dropdown-menu li:hover {
+    background: transparent;
+    border: 4px solid;
+    border-radius: 30px;
+    border-image: conic-gradient(
+        #4C3AEC 25%,
+        #CB17DA 58%,
+        #270E59 75%,
+        #6A169A 99%
+    )1;
+    transform: scale(1);
+}
+
+
+#HeaderTecnicos {
+    position:relative;
+    background: #000000;
+    text-align: center;
+    padding-bottom:50px;
+    padding-top:50px;
+    
+}
+
+#HeaderTecnicos h1{
+    color:#ffffff;
+    font-size : 60px;
+    font-weight: lighter;
+
+}
