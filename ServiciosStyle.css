@@ -211,6 +211,218 @@
 
 /*Fin Seccion 1 */
 
+/*Inicio Header seccion 2 */
+
+#HeaderServices {
+    position:relative;
+    background: #000000;
+    text-align: center;
+    padding-bottom:40px;
+    padding-top:40px;
+    overflow: hidden;
+    
+}
+
+#HeaderServices h1{
+    color:#ffffff;
+    font-size : 60px;
+    font-weight: lighter;
+}
+
+/*Fin Header seccion 2 */
+
+/* Inicio Seccion 2 */
+
+#OurServices {
+    background-color: #D9D9D9;
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+    gap: 40px; /* Espaciado entre las tarjetas y el botón */
+    padding-top:90px ;
+    padding-bottom:170px ;
+}
+
+.ContainerServicios {
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 55px;
+
+}
+
+.TarjetaServicio{
+    position: relative;
+    display: flex;
+    flex-direction: row; /* Coloca la imagen y el texto en fila */
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Espaciado entre la imagen del técnico y el texto */
+    padding: 20px; /* Espaciado interno para la tarjeta */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+}
+
+.TarjetaServicio .Simagen {
+    position:relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%; /* Hace que el contenedor sea responsivo */
+    height: auto; 
+    max-width: 340px; 
+    max-height: 340px; 
+    overflow: hidden; 
+}
+
+.TarjetaServicio .Simagen img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    -moz-box-shadow: 0 0 3px #000000;
+    -webkit-box-shadow: 0 0 3px #000000;
+    box-shadow: 0 0 3px #000000;
+}
+
+.TarjetaServicio .Sbody {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Coloca el texto y las estrellas en columna */
+    gap: 25px; /* Espaciado entre los elementos del texto */
+    max-width: 600px; /* Limita el ancho máximo del texto */
+}
+
+.TarjetaServicio .Sbody h3{
+    font-size:22px;
+    font-weight: bolder;
+    color: #000;
+}
+
+.TarjetaServicio .Sbody p{
+    font-size:18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.dos .Simagen,
+.cuatro .Simagen {
+    order:2;
+}
+
+.dos .Sbody,
+.cuatro .Simagen{
+    order:1;
+    text-align: right;
+}
+
+.Agenda {
+    background: transparent; /* Fondo transparente inicialmente */
+    color: #000000; /* Texto negro inicialmente */
+    padding: 25px 30px; /* Espaciado interno */
+    border: 1.3px solid #000000; /* Borde negro */
+    text-decoration: underline; /* Elimina el subrayado */
+    font-size: 40px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    align-self: center; /* Centra el botón dentro del contenedor Flexbox */
+    text-align: center; /* Centra el texto dentro del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-top:50px;
+
+}
+
+.Agenda:hover {
+    transform: scale(1.5); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    background: rgb(238,166,115);
+    background: linear-gradient(180deg, rgba(238,166,115,1) 0%, rgba(207,124,64,1) 50%, rgba(173,83,4,1) 100%);
+}
+
+/* Inicio Footer */
+
+.Foot {
+    background: #BDDCFF; 
+}
+
+.Foot .FootHeader {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-left:100px ;
+    padding-right:100px ;
+}
+
+.Foot .FootHeader .LogoFoot {
+    flex: 1; 
+    display : flex;
+    justify-content: flex-start;  
+}
+
+.Foot .FootHeader .LogoFoot img {
+    width: 350px; 
+    height: auto; 
+    margin-left:150px;
+}
+
+.Foot .FootHeader .Nombreempresa {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+}
+
+.Foot .FootHeader .Nombreempresa p {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 100px;
+}
+
+.Foot .FootHeader .RedesSociales {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+    gap: 100px; 
+}
+
+.Foot .FootHeader .RedesSociales img {
+    width: 70px; 
+    height: auto; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
+    border-radius: 10px; 
+}
+
+.Foot hr {
+    background: rgb(51,18,18);
+    background: linear-gradient(90deg, rgba(51,18,18,1) 0%, rgba(235,200,200,1) 51%, rgba(1,0,0,1) 100%);
+    height: 6.5px;
+    border-radius:30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.FootSection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:55px ;
+    padding-bottom:100px ;
+
+}
+
+.FootSection div {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    align-items: center;
+}
+
+
+.FootSection div a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
 
 
 
