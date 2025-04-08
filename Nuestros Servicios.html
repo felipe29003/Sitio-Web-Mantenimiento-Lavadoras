@@ -4,46 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--link a la hoja de estilos correspondiente a este html-->
     <link rel="stylesheet" href="ServiciosStyle.css">
 </head>
+<!--Body para la 3 pagina del sitio web "Nuestros servicios" -->
 <body>
+    <!--Etiqueta nav la cual contiene el menu de navegacion principal del sitio web  -->
     <nav class="menu">
+         <!--imagen logo de la empresa-->
         <img class="logo" src="Imagenes/Logo-Empresa.png" alt="logo empresa">
+        <!--Lista desordenada la cual representa los enlaces del menu -->
         <ul>
+            <!--Items de la lista desornenada, se utiliza la etiqueta <a href=""></a> para referenciar otras secciones de la pagina web-->
+            <a href=""></a>
             <li><a class="Item" href="Home.html">Inicio</a></li>
             <li><a class="Item" href="#SobreNosotros">¿Quiénes somos?</a></li>
             <li><a class="Item" href="Nuestros Servicios.html">Nuestros servicios</a></li>
             <li><a class="Item" href="Clientes Satisfechos.html">Clientes satisfechos</a></li>
             <li><a class="Item" href="Contactanos.html">Contactanos</a></li>
         </ul>
+        <!--Contenedor generico div el cual agrupa los elementos del menu desplegable de inicio de sesion -->
         <div class="user-menu">
+             <!--Icono de inicio de sesion -->
             <img class="Usuario" src="Imagenes/Imagen-Usuario.png" alt="Inicio Sesion">
             <div class="dropdown-menu">
+                <!--Lista desordenada la cual contiene los enlaces del menu desplegable(Iniciar sesion,registrarse y actualizar datos) -->
                 <ul>
-                    <li><a class="UserItem" href="#">Iniciar sesión</a></li>
-                    <li><a class="UserItem" href="#">Registrarse</a></li>
-                    <li><a class="UserItem" href="#">Actualizar datos</a></li>
+                    <li><a class="UserItem" href="login.html">Iniciar sesión</a></li>
+                    <li><a class="UserItem" href="registro.html">Registrarse</a></li>
+                    <li><a class="UserItem" href="actualizar.html">Actualizar datos</a></li>
                     <li>
+                        <!--ultimo item de la lista desordenada, la cual es el icono de cerrar sesion-->
                         <a class="UserItem" href="#">
                             <img src="Imagenes/Cerrar-Sesion.png" alt="Cerrar sesión">
-                            
                         </a>
                     </li>
                 </ul>
             </div>
     </nav>
+    <!--Enlace al archivo JavaScript el cual maneja el evento del menu desplegable-->
     <script src="script.js"></script>
 
+
+    <!--Header de la primera seccion de Nuestros servicios-->
     <section id="HeaderTecnicos">
         <h1>Nuestros tecnicos</h1>  
     </section>
 
+    <!--Contenido de la primera seccion-->
     <section id="Tecnicos">
+        <!--Container generico el cual agrupa a los tecnicos-->
         <div class="TecnicosContainer">
+            <!--Tarjeta individual de tecnico la cual se divide en dos contenedores hijos-->
             <div class="TarjetaTecnico">
+                <!--Primer contenedor hijo el cual tiene la imagen correspondiente al tecnico-->
                 <div class="TecnicoImagen">
                     <img src="Imagenes/Sebas.png" alt="Técnico">
                 </div>
+                <!--Segundo contenedor hijo el cual tiene el nombre y el texto correspondiente a la imagen del tecnico-->
                 <div class="TecnicoTexto">
                     <h2>SEBASTIAN MATEUS</h2>
                     <p>Hola mi nombre es Sebastian Mateus, Soy técnico reparador egresado del Politécnico Grancolombiano. Cuento con 10 años de experiencia en el campo y mi objetivo es brindarte la mejor atención posible.</p>
@@ -51,6 +69,7 @@
                 </div>  
             </div>
 
+            <!--Mas tarjetas de tecnicos los cuales cumplen las mismas propiedades que el primero-->
             <div class="TarjetaTecnico Num2">
                 <div class="TecnicoImagen">
                     <img src="Imagenes/Tecnico2.png" alt="Técnico">
@@ -75,22 +94,29 @@
         </div>
     </section>
 
+    <!--Header de la segunda seccion(nuestros servicios)-->
     <section id="HeaderServices">
         <h1>Nuestros servicios</h1>
     </section>
 
+    <!--Contenido de la segunda seccion-->
     <section id="OurServices">
+        <!--Contenedor generico que agrupa todos los servicios-->
         <div class="ContainerServicios">
+            <!--Contenedor hijo el cual se divide en dos partes y agrupa los elementos de las tarjetas de servicios-->
             <div class="TarjetaServicio">
+                <!--Primera parte del contenedor hijo la cual comprende la imagen asociada al servicio-->
                 <div class="Simagen">
                     <img src="Imagenes/Servicio 1.png" alt="Servicio1">
                 </div>
+                <!--Segunda parte del contenedor hijo la cual contiene su descripcion, titulo y mas informacion-->
                 <div class="Sbody">
                     <h3>Diagnostico y reparacion de fallas</h3>
                     <p>Diagnosticamos a domicilio y en nuestros puntos físicos tu lavadora, a sí mismo, dependiendo de la gravedad del daño la reparamos y la dejamos como nueva. No te preocupes, obtienes garantía durante 2 años con asesoramiento por parte de nuestros asesores para que te dure el mayor tiempo posible.</p>
                     <p>Duracion estimada : 2-3 horas &emsp; Precio estimado : 100.000-150.000</p>
                 </div>
             </div>
+            <!--Mas tarjetas de servicios las cuales cumplen con las propiedades de las anteriores-->
             <div class="TarjetaServicio dos">
                 <div class="Simagen">
                     <img src="Imagenes/Servicio 2.png" alt="Servicio2">
@@ -131,17 +157,24 @@
                 </div>
             </div>
         </div>
+        <!--Elemento ancla-->
         <a class="Agenda" href="#">¡AGENDA TU SERVICIO YA MISMO!</a>
     </section>
 
+
+    <!--Etiqueta footer para representar el pie de pagina-->
     <footer class = "Foot">
+         <!--El footer se compone de 2 contenedores div los cuales a su vez tienen mas elementos hijos-->
         <div class ="FootHeader">
+            <!--Contenedor el cual contiene el logo de la empresa-->
             <div class = "LogoFoot">
                 <img src="Imagenes/Logo-Empresa.png" alt="LogoFooter">
             </div>
+            <!--Contenedor el cual contiene el nombre de la empresa-->
             <div class="Nombreempresa">
                 <p> &#169; 2005 - 2025 WashTech Solutions S.A</p>
             </div>
+            <!--Contenedor el cual contiene las imagenes de las redes sociales de la empresa-->
             <div class="RedesSociales">
                 <img src="Imagenes/Instagram.png" alt="Instagram">
                 <img src="Imagenes/Facebook.png" alt="Facebook">
@@ -149,31 +182,32 @@
                 <img src="Imagenes/Telegram.png" alt="Telegram">
             </div>
         </div>
+        <!--Linea horizontal la cual separa la primera seccion del footer de la segunda-->
         <hr>
+        <!--Segundo contenedor padre el cual agrupa los enlaces rapidos del footer-->
         <div class="FootSection">
             <div>
                 <h2>Nuestros servicios</h2>
-                <a href="#">Revision lavadoras</a>
-                <a href="#">Cambio de componentes</a>
-                <a href="#">Domicilios</a>
-                <a href="#">Instalacion lavadoras</a>
-                <a href="#">Mantenimiento preventivo</a>
-                <a href="#">Reparacion lavadoras</a>
+                <a href="Nuestros Servicios.html">Revision lavadoras</a>
+                <a href="Nuestros Servicios.html">Cambio de componentes</a>
+                <a href="Nuestros Servicios.html">Domicilios</a>
+                <a href="Nuestros Servicios.html">Instalacion lavadoras</a>
+                <a href="Nuestros Servicios.html">Mantenimiento preventivo</a>
+                <a href="Nuestros Servicios.html">Reparacion lavadoras</a>
             </div>
             <div>
                 <h2>Acerca de nosotros</h2>
-                <a href="#">¿Quienes Somos?</a>
+                <a href="#SobreNosotros">¿Quienes Somos?</a>
             </div>
             <div>
                 <h2>Contactanos</h2>
-                <a href="#">Deja tus comentarios</a>
-                <a href="#">Waste.Solver@Hotmail.com</a>
-                <a href="#">Telefono: (802) 919-3925 </a>
-                <a href="#">WhatsApp: 1-355-993-3407</a>
-                <a href="#">Agenda tu servicio</a>
+                <a href="Contactanos.html">Deja tus comentarios</a>
+                <a href="Contactanos.html">Waste.Solver@Hotmail.com</a>
+                <a href="Contactanos.html">Telefono: (802) 919-3925 </a>
+                <a href="Contactanos.html">WhatsApp: 1-355-993-3407</a>
+                <a href="Contactanos.html">Agenda tu servicio</a>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

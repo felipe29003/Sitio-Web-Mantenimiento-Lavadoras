@@ -157,8 +157,8 @@
     transform: translateY(-50%) rotate(90deg); /* Ajustar el centrado vertical y rotar 90 grados */
     width: 100px; /* Ajustar el tamaño de la imagen */
     height: 100px;
-    z-index: -1; /* Colocar la imagen detrás del texto si es necesario */
-    opacity: 0.8; /* Opcional: hacer la imagen semitransparente */
+    z-index: -1; /* Colocar la imagen detrás del texto */
+    opacity: 0.8; /* Opcional: hace la imagen semitransparente */
 }
 
 #Presentacion .circuit2 {
@@ -168,8 +168,8 @@
     transform: translateY(-50%) rotate(270deg); /* Ajustar el centrado vertical y rotar 90 grados */
     width: 100px; /* Ajustar el tamaño de la imagen */
     height: 100px;
-    z-index: -1; /* Colocar la imagen detrás del texto si es necesario */
-    opacity: 0.8; /* Opcional: hacer la imagen semitransparente */
+    z-index: -1; /* Colocar la imagen detrás del texto */
+    opacity: 0.8; /* Hace la imagen transparente */
 }
 
 #Presentacion .gear {

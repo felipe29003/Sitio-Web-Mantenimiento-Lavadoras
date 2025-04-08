@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      background-image: url('imagenes/lavadorafondo.jpg'); /* Cambia esto al nombre real del fondo si ya lo tienes */
+      background-image: url('imagenes/lavadorafondo.jpg'); 
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -69,17 +69,23 @@
     }
   </style>
 </head>
+<!--Body para el formulario de inicio de sesion-->
 <body>
-  <a href="index.html" class="back-arrow">&#x25C0;</a>
 
+  <!--Elemento ancla con un simbolo unicode asociado a un triangulo apuntando hacia la izquierda, el cual dirige al usuario al Inicio-->
+  <a href="Home.html" class="back-arrow">&#x25C0;</a>
+
+  <!--Contenedor generico el cual agrupa todos los elementos del formulario inicio de sesion-->
   <div class="login-container">
     <h2>INICIAR SESIÓN</h2>
+    <!--Etiqueta de tipo formulario la cual contiene 3 input y 1 submit-->
     <form>
       <input type="text" placeholder="Ingrese su número de identificación" required>
       <input type="password" placeholder="Ingrese su contraseña" required>
       <button type="submit">Ingresar</button>
     </form>
-    <a href="#">¿No tiene cuenta? Regístrese</a>
+    <!--Elemento de tipo ancla el cual redirige al usuario a la pagina Registro.html-->
+    <a href="registro.html">¿No tiene cuenta? Regístrese</a>
   </div>
 </body>
 </html>
