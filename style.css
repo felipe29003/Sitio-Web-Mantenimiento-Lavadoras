@@ -77,7 +77,7 @@
     border-radius: 10px;
     transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Transición suave */
 }
-
+    
 
 .Item:hover {
     background-color: #000000;
@@ -117,7 +117,7 @@
         #4C3AEC 25%,
         #CB17DA 58%,
         #270E59 75%,
-        #6A169A 99%
+        #6A169A 99% 
     )1;
     transform: scale(1);
 }
@@ -168,7 +168,7 @@
     transform: translateY(-50%) rotate(270deg); /* Ajustar el centrado vertical y rotar 90 grados */
     width: 100px; /* Ajustar el tamaño de la imagen */
     height: 100px;
-    z-index: -1; /* Colocar la imagen detrás del texto */
+    z-index: -1; /* Colocar la imagen detrás del texto   */
     opacity: 0.8; /* Hace la imagen transparente */
 }
 
