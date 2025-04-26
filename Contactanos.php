@@ -19,30 +19,38 @@
         <ul>
             <!--Items de la lista desornenada, se utiliza la etiqueta <a href=""></a> para referenciar otras secciones de la pagina web-->
             <a href=""></a>
-            <li><a class="Item" href="Home.html">Inicio</a></li>
+            <li><a class="Item" href="Home.php">Inicio</a></li>
             <li><a class="Item" href="#SobreNosotros">¿Quiénes somos?</a></li>
-            <li><a class="Item" href="Nuestros Servicios.html">Nuestros servicios</a></li>
-            <li><a class="Item" href="Clientes Satisfechos.html">Clientes satisfechos</a></li>
-            <li><a class="Item" href="Contactanos.html">Contactanos</a></li>
+            <li><a class="Item" href="Nuestros Servicios.php">Nuestros servicios</a></li>
+            <li><a class="Item" href="Clientes Satisfechos.php">Clientes satisfechos</a></li>
+            <li><a class="Item" href="Contactanos.php">Contactanos</a></li>
         </ul>
         <!--Contenedor generico div el cual agrupa los elementos del menu desplegable de inicio de sesion -->
+        
         <div class="user-menu">
-             <!--Icono de inicio de sesion -->
-            <img class="Usuario" src="Imagenes/Imagen-Usuario.png" alt="Inicio Sesion">
-            <div class="dropdown-menu">
-                <!--Lista desordenada la cual contiene los enlaces del menu desplegable(Iniciar sesion,registrarse y actualizar datos) -->
-                <ul>
-                    <li><a class="UserItem" href="login.html">Iniciar sesión</a></li>
-                    <li><a class="UserItem" href="registro.html">Registrarse</a></li>
+        <!--Icono de inicio de sesión-->
+        <img class="Usuario" src="Imagenes/Imagen-Usuario.png" alt="Inicio Sesion">
+        <div class="dropdown-menu">
+          <ul>
+            <?php
+            session_start(); //inicia la sesion
+            if (isset($_SESSION['usuario'])) {
+                echo '
+                    <li><a class="UserItem" href="mis_servicios.php">Mis servicios</a></li>
                     <li><a class="UserItem" href="actualizar.html">Actualizar datos</a></li>
-                    <li>
-                        <!--ultimo item de la lista desordenada, la cual es el icono de cerrar sesion-->
-                        <a class="UserItem" href="#">
-                            <img src="Imagenes/Cerrar-Sesion.png" alt="Cerrar sesión">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <li><a class="UserItem" href="cerrar_sesion.php">
+                        <img src="Imagenes/Cerrar-Sesion.png" alt="Cerrar sesión">
+                    </a></li>
+                ';
+            } else {
+                echo '
+                    <li><a class="UserItem" href="login.php">Iniciar sesión</a></li>
+                    <li><a class="UserItem" href="registro.php">Registrarse</a></li>
+                ';
+            }
+            ?>
+          </ul>
+        </div>
     </nav>
 
     <!--Header para la unica seccion de contactanos-->

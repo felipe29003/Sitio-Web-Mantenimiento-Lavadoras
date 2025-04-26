@@ -77,12 +77,14 @@
       echo "<script language ='JavaScript'> alert('uno de los campos esta vacio'); location.assign('login.php'); </script>";
     }else{
       include("conexion.php");
+      session_start();
       $id=$_POST['id'];
       $contraseña=$_POST['contraseña'];
       $sql="select * from usuario where id='".$id."' and contraseña='".$contraseña."'";
       $resultado=mysqli_query($conexion,$sql);
       if($fila=mysqli_fetch_assoc($resultado)){
-        echo "<script language ='JavaScript'> alert('bienvenido'); location.assign('Home.html'); </script>";
+        $_SESSION['usuario'] = $fila['id'];
+        echo "<script language ='JavaScript'> alert('bienvenido'); location.assign('Home.php'); </script>";
       }else{
         echo "<script language ='JavaScript'> alert('no se encuentra registrado en la base de datos'); location.assign('login.php'); </script>";
 
@@ -94,7 +96,7 @@
   
 ?>
   <!--Elemento ancla con un simbolo unicode asociado a un triangulo apuntando hacia la izquierda, el cual dirige al usuario al Inicio-->
-  <a href="Home.html" class="back-arrow">&#x25C0;</a>
+  <a href="Home.php" class="back-arrow">&#x25C0;</a>
 
   <!--Contenedor generico el cual agrupa todos los elementos del formulario inicio de sesion-->
   <div class="login-container">

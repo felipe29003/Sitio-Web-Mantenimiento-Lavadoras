@@ -118,7 +118,7 @@
   
 ?>
   <!--Elemento ancla con un simbolo unicode asociado a un triangulo apuntando hacia la izquierda, el cual dirige al usuario al Inicio-->
-  <a href="Home.html" class="back-arrow">&#x25C0;</a>
+  <a href="Home.php" class="back-arrow">&#x25C0;</a>
   <!--Contenedor generico el cual agrupa todos los elementos del formulario de registro-->
   <div class="registro-container">
     <h2>REGISTRO</h2>
