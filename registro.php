@@ -29,7 +29,7 @@
     }
 
     .registro-container h2 {
-      margin-bottom: 20px;
+      margin-bottom: 20px;  
     }
 
     input[type="text"], input[type="email"], input[type="password"] {
@@ -90,26 +90,56 @@
 </head>
 <!--Body para el formulario de registro-->
 <body>
+<?php
+  if(isset($_POST['Enviar'])){
+    $nombre=$_POST['nombre'];
+    $apellido=$_POST['apellido'];
+    $id=$_POST['id'];
+    $correo=$_POST['correo'];
+    $contraseña=$_POST['contraseña'];
+
+    include("conexion.php");
+    $sql="insert into usuario(nombre,apellido,id,correo,contraseña)
+    values('".$nombre."','".$apellido."','".$id."','".$correo."','".$contraseña."')";
+    $resultado=mysqli_query($conexion,$sql);
+    if($resultado){
+      echo "<script language ='JavaScript'> alert('los datos correctos'); location.assign('login.php'); </script>";
+      
+    }else{
+      echo "<script language ='JavaScript'> alert('algun dato esta incorrecto'); location.assign('registro.php'); </script>";
+    }
+
+    mysqli_close($conexion);
+
+
+
+  }else{
+
+  
+?>
   <!--Elemento ancla con un simbolo unicode asociado a un triangulo apuntando hacia la izquierda, el cual dirige al usuario al Inicio-->
   <a href="Home.html" class="back-arrow">&#x25C0;</a>
   <!--Contenedor generico el cual agrupa todos los elementos del formulario de registro-->
   <div class="registro-container">
     <h2>REGISTRO</h2>
     <!--Etiqueta de tipo formulario la cual contiene 5 input, un checkbox y un submit-->
-    <form>
-      <input type="text" placeholder="Ingrese su primer nombre" required>
-      <input type="text" placeholder="Ingrese su apellido" required>
-      <input type="text" placeholder="Ingrese su número de identificación" required>
-      <input type="email" placeholder="Ingrese su correo" required>
-      <input type="password" placeholder="Ingrese su contraseña" required>
+    <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+      <input type="text" name="nombre" placeholder="Ingrese su primer nombre" required>
+      <input type="text" name="apellido" placeholder="Ingrese su apellido" >
+      <input type="text" name="id" placeholder="Ingrese su número de identificación" required>
+      <input type="email" name="correo" placeholder="Ingrese su correo" required>
+      <input type="password" name="contraseña" placeholder="Ingrese su contraseña" required>
 
       <div class="checkbox">
         <input type="checkbox" required>
         <label>Acepta nuestras políticas de protección y tratamiento de datos?</label>
       </div>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" name="Enviar">Enviar</button>
     </form>
   </div>
+<?php
+}
+?>
 </body>
 </html>

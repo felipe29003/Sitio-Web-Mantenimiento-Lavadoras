@@ -71,7 +71,28 @@
 </head>
 <!--Body para el formulario de inicio de sesion-->
 <body>
+<?php
+  if(isset($_POST['Enviar'])){
+    if(empty($_POST['id']) || empty($_POST['contraseña'])){
+      echo "<script language ='JavaScript'> alert('uno de los campos esta vacio'); location.assign('login.php'); </script>";
+    }else{
+      include("conexion.php");
+      $id=$_POST['id'];
+      $contraseña=$_POST['contraseña'];
+      $sql="select * from usuario where id='".$id."' and contraseña='".$contraseña."'";
+      $resultado=mysqli_query($conexion,$sql);
+      if($fila=mysqli_fetch_assoc($resultado)){
+        echo "<script language ='JavaScript'> alert('bienvenido'); location.assign('Home.html'); </script>";
+      }else{
+        echo "<script language ='JavaScript'> alert('no se encuentra registrado en la base de datos'); location.assign('login.php'); </script>";
 
+      }
+    }
+    
+  }else{
+
+  
+?>
   <!--Elemento ancla con un simbolo unicode asociado a un triangulo apuntando hacia la izquierda, el cual dirige al usuario al Inicio-->
   <a href="Home.html" class="back-arrow">&#x25C0;</a>
 
@@ -79,13 +100,16 @@
   <div class="login-container">
     <h2>INICIAR SESIÓN</h2>
     <!--Etiqueta de tipo formulario la cual contiene 3 input y 1 submit-->
-    <form>
-      <input type="text" placeholder="Ingrese su número de identificación" required>
-      <input type="password" placeholder="Ingrese su contraseña" required>
-      <button type="submit">Ingresar</button>
+    <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+      <input type="text" name="id" placeholder="Ingrese su número de identificación" required>
+      <input type="password" name="contraseña" placeholder="Ingrese su contraseña" required>
+      <button type="submit" name="Enviar">Enviar</button>
     </form>
     <!--Elemento de tipo ancla el cual redirige al usuario a la pagina Registro.html-->
-    <a href="registro.html">¿No tiene cuenta? Regístrese</a>
+    <a href="registro.php">¿No tiene cuenta? Regístrese</a>
   </div>
+<?php
+  }
+?>
 </body>
 </html>
