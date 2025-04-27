@@ -1,0 +1,129 @@
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif; 
+}
+
+#HeaderTarjetasS {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f0f0f0;
+    padding-top:40px ;
+    padding-bottom: 40px; 
+}
+
+#HeaderTarjetasS a {
+    position: absolute;
+    color: white;
+    left:130px ;
+    font-size: 18px;
+    border-radius: 15px;
+    padding-top:20px ;
+    padding-bottom:20px ;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 23px;
+    background: #e33d3d;
+    background: linear-gradient(135deg,rgba(227, 61, 61, 1) 0%, rgba(230, 44, 56, 1) 48%, rgba(235, 134, 144, 1) 97%);
+
+}
+
+#HeaderTarjetasS h1 {
+    color: #000000;
+    font-size: 60px;
+    font-weight: lighter;
+    text-align: center; 
+    flex: 1; 
+}
+
+#TarjetasS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f10eb;
+    background: linear-gradient(215deg,rgba(31, 16, 235, 1) 0%, rgba(39, 39, 196, 1) 49%, rgba(0, 212, 255, 1) 100%);
+    min-height: 100vh;
+    
+}
+
+.ContainerT {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-top:100px ;
+    padding-bottom: 100px;
+}
+
+.TarjetaMiServicio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 1100px; 
+    border: 1.2px solid #000000; 
+    border-radius: 20px; 
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    background: #00ccff;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.ServicioHead {
+    text-align: center; 
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 70px; 
+}
+
+.ServicioBody {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding-top:20px ;
+    padding-bottom: 20px;
+    padding-left: 120px;
+    text-align: left; 
+    overflow: hidden; 
+}
+
+.ServicioBody p {
+    font-size: 23px;
+}
+
+.ServicioEliminar {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-right: 120px; 
+}
+
+.ServicioEliminar img {
+    width: 120px; 
+    height: 120px;
+}
+
+.TarjetaMiServicio:hover {
+    transform: scale(1.1);
+}
+#HeaderTarjetasS a:hover{
+    background: #e33d3d;
+    background: linear-gradient(210deg,rgba(227, 61, 61, 1) 0%, rgba(230, 44, 56, 1) 48%, rgba(235, 134, 144, 1) 97%);
+}
+
+#TarjetasS .Noservice{
+    padding: 30px;
+    font-size: 70px;
+    color: #000000;
+    border-radius:20px ;
+    border: 5px solid #000000;
+    background-color: #00ccff;
+}
+

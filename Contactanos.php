@@ -181,26 +181,26 @@
        <!--Segundo contenedor padre el cual agrupa los enlaces rapidos del footer-->
        <div class="FootSection">
            <div>
-               <h2>Nuestros servicios</h2>
-               <a href="Nuestros Servicios.html">Revision lavadoras</a>
-               <a href="Nuestros Servicios.html">Cambio de componentes</a>
-               <a href="Nuestros Servicios.html">Domicilios</a>
-               <a href="Nuestros Servicios.html">Instalacion lavadoras</a>
-               <a href="Nuestros Servicios.html">Mantenimiento preventivo</a>
-               <a href="Nuestros Servicios.html">Reparacion lavadoras</a>
-           </div>
-           <div>
-               <h2>Acerca de nosotros</h2>
-               <a href="#SobreNosotros">¿Quienes Somos?</a>
-           </div>
-           <div>
-               <h2>Contactanos</h2>
-               <a href="Contactanos.html">Deja tus comentarios</a>
-               <a href="Contactanos.html">Waste.Solver@Hotmail.com</a>
-               <a href="Contactanos.html">Telefono: (802) 919-3925 </a>
-               <a href="Contactanos.html">WhatsApp: 1-355-993-3407</a>
-               <a href="Contactanos.html">Agenda tu servicio</a>
-           </div>
+                <h2>Nuestros servicios</h2>
+                <a href="Nuestros Servicios.php">Revision lavadoras</a>
+                <a href="Nuestros Servicios.php">Cambio de componentes</a>
+                <a href="Nuestros Servicios.php">Domicilios</a>
+                <a href="Nuestros Servicios.php">Instalacion lavadoras</a>
+                <a href="Nuestros Servicios.php">Mantenimiento preventivo</a>
+                <a href="Nuestros Servicios.php">Reparacion lavadoras</a>
+            </div>
+            <div>
+                <h2>Acerca de nosotros</h2>
+                <a href="#SobreNosotros">¿Quienes Somos?</a>
+            </div>
+            <div>
+                <h2>Contactanos</h2>
+                <a href="Contactanos.php">Deja tus comentarios</a>
+                <a href="Contactanos.php">Waste.Solver@Hotmail.com</a>
+                <a href="Contactanos.php">Telefono: (802) 919-3925 </a>
+                <a href="Contactanos.php">WhatsApp: 1-355-993-3407</a>
+                <a href="Contactanos.php">Agenda tu servicio</a>
+            </div>
        </div>
    </footer>
     <script>
