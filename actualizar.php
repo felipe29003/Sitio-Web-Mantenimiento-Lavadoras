@@ -71,31 +71,78 @@
 </head>
 <!--Body para el formulario de actualizar datos-->
 <body>
-  <!--Elemento ancla con un simbolo unicode asociado a un triangulo apuntando hacia la izquierda, el cual dirige al usuario al Inicio-->
-  <a href="Home.php" class="back-arrow">&#x25C0;</a>
+<?php
+session_start();
+include("conexion.php");
 
-  <!--Contenedor generico el cual agrupa todos los elementos del formulario de actualizacion de datos-->
-  <div class="form-container">
-    <h2>ACTUALIZAR DATOS</h2>
-    <!--Etiqueta de tipo formulario la cual contiene 5 input y un submit-->
-    <form>
-      <label>Actualice primer nombre</label>
-      <input type="text" placeholder="Ingrese su primer nombre" required>
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_SESSION['usuario'])) {
+    $idSesion = $_SESSION['usuario'];
+    $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
+    $apellido = mysqli_real_escape_string($conexion, $_POST['apellido']);
+    $correo = mysqli_real_escape_string($conexion, $_POST['correo']);
+    $contraseña = mysqli_real_escape_string($conexion, $_POST['contraseña']);
 
-      <label>Actualice su apellido</label>
-      <input type="text" placeholder="Ingrese su apellido" required>
+    $actualizaciones = [];
 
-      <label>Actualice su número de identificación</label>
-      <input type="text" placeholder="Ingrese su número de identificación" required>
+    if (!empty($nombre)) {
+      $actualizaciones[] = "nombre='$nombre'";
+    }
+    if (!empty($apellido)) {
+      $actualizaciones[] = "apellido='$apellido'";
+    }
+    if (!empty($correo)) {
+      $actualizaciones[] = "correo='$correo'";
+    }
+    if (!empty($contraseña)) {
+      $actualizaciones[] = "contraseña='$contraseña'";
+    }
 
-      <label>Actualice su correo</label>
-      <input type="email" placeholder="Ingrese su correo" required>
+    if (!empty($actualizaciones)) {
+      // Unimos las partes con coma
+      $sql = "UPDATE usuario SET " . implode(", ", $actualizaciones) . " WHERE id='$idSesion'";
 
-      <label>Actualice su contraseña</label>
-      <input type="password" placeholder="Ingrese su contraseña" required>
+      $resultado = mysqli_query($conexion, $sql);
 
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
+      if ($resultado) {
+        echo "<script language='JavaScript'> alert('Datos actualizados correctamente'); location.assign('Home.php'); </script>";
+      } else {
+      echo "<script language='JavaScript'> alert('Error al actualizar los datos'); location.assign('actualizar.php'); </script>";
+      }
+      } else {
+        echo "<script language='JavaScript'> alert('No se ingreso ningun dato'); location.assign('actualizar.php'); </script>";
+      }
+      mysqli_close($conexion);
+    } else{
+      echo "<script language='JavaScript'> alert('Acceso denegado, debe iniciar sesion'); location.assign('login.php'); </script>";
+    }
+} else {
+?>
+<!-- Enlace de regreso -->
+<a href="Home.php" class="back-arrow">&#x25C0;</a>
+
+<!-- Formulario de actualización -->
+<div class="form-container">
+  <h2>ACTUALIZAR DATOS</h2>
+  <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+    <label>Actualice primer nombre</label>
+    <input type="text" name="nombre" placeholder="Ingrese su primer nombre">
+
+    <label>Actualice su apellido</label>
+    <input type="text" name="apellido" placeholder="Ingrese su apellido">
+
+    <label>Actualice su correo</label>
+    <input type="email" name="correo" placeholder="Ingrese su correo">
+
+    <label>Actualice su contraseña</label>
+    <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
+
+    <button name="Enviar" type="submit">Enviar</button>
+  </form>
+</div>
+<?php
+}
+?>
 </body>
 </html>
+

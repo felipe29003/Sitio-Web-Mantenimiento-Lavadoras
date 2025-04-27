@@ -37,7 +37,7 @@
             if (isset($_SESSION['usuario'])) {
                 echo '
                     <li><a class="UserItem" href="mis_servicios.php">Mis servicios</a></li>
-                    <li><a class="UserItem" href="actualizar.html">Actualizar datos</a></li>
+                    <li><a class="UserItem" href="actualizar.php">Actualizar datos</a></li>
                     <li><a class="UserItem" href="cerrar_sesion.php">
                         <img src="Imagenes/Cerrar-Sesion.png" alt="Cerrar sesión">
                     </a></li>
