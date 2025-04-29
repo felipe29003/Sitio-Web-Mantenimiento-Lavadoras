@@ -1,3 +1,30 @@
+<?php
+    require_once 'conexion.php'; //incluye el archivo de conexion a la base de datos
+
+    $query = 'select * from tipos_consulta';
+    $resultado = mysqli_query($conexion, $query);
+    
+    if(isset($_POST['submit-btn'])){
+        if(empty($_POST['nombre']) || empty($_POST['correo']) || empty($_POST['mensaje']) || empty($_POST['telefono'])){
+            echo "<script language ='JavaScript'> alert('uno de los campos esta vacio'); location.assign('Contactanos.php'); </script>";
+        }else{
+            $nombre = $_POST['nombre'];
+            $correo = $_POST['correo'];
+            $telefono = $_POST['telefono'];
+            $telefono_fijo = $_POST['telefono-fijo'];
+            $tipo_consulta = $_POST['tipo-consulta'];
+            $mensaje = $_POST['mensaje'];
+
+            $queryInsert = "INSERT INTO contactanos (nombre, correo, telefono, telefono_fijo, tipo_consulta, mensaje) VALUES ('$nombre', '$correo', '$telefono', '$telefono_fijo', '$tipo_consulta', '$mensaje')";
+            $resultadoInsert = mysqli_query($conexion, $queryInsert);
+            if ($resultadoInsert){
+                echo "<script language ='JavaScript'> alert('la solicitud fue realizada correctamente, unos de nuestros asesores se comunicara con usted prontamente'); location.assign('Contactanos.php'); </script>";
+            }else{
+                echo "<script language ='JavaScript'> alert('algun dato esta incorrecto'); location.assign('Contactanos.php'); </script>";
+            }    
+        }   
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -64,7 +91,7 @@
         <!--Contenedor el cual agrupa todos los elementos del formulario de contacto-->
         <div class="form-container">
              <!--Formulario de contacto, cada item del formulario tiene un contenedor generico propio-->
-            <form id="contactForm">
+            <form action="<?=$_SERVER['PHP_SELF']?>" method="post"  id="contactForm">
                  <!--Contenedor generico el cual agrupa un campo del formulario y su etiqueta correspondiente-->
                 <div class="form-group">
                     <label for="nombre">Nombre Completo</label>
@@ -93,10 +120,11 @@
                     <!--Etiqueta de tipo select-->
                     <select id="tipo-consulta" name="tipo-consulta" required>
                         <option value="" disabled selected>Seleccionar</option>
-                        <option value="consulta">Consulta</option>
-                        <option value="reclamo">Reclamo</option>
-                        <option value="sugerencia">Sugerencia</option>
-                        <option value="otro">Otro</option>
+                        <?php
+                            while ($row = mysqli_fetch_assoc($resultado)) {
+                                echo '<option value="'.$row['tipo_id'].'">'.$row['nombre'].'</option>';
+                            }
+                        ?>
                     </select>
                 </div>
 
@@ -105,7 +133,7 @@
                     <textarea id="mensaje" name="mensaje" required></textarea>
                 </div>
                 <!--Etiqueta boton de tipo enviar-->
-                <button type="submit" class="submit-btn">ENVIAR</button>
+                <button type="submit" class="submit-btn" name="submit-btn">ENVIAR</button>
             </form>
         </div>
         
@@ -203,13 +231,33 @@
             </div>
        </div>
    </footer>
-    <script>
-        // JavaScript para manejar el envío del formulario
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('¡Formulario enviado! Te contactaremos pronto.');
-            this.reset();
+   <?php
+        mysqli_close($conexion);
+    ?>
+    <!-- <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(this);
+        console.log(formData);
+        let alertMessage = "📋 Datos del formulario:\n=====================\n";
+        
+        // Agregar cada campo al mensaje
+        for (let [key, value] of formData.entries()) {
+            // Formatear el nombre del campo (eliminar guiones y capitalizar)
+            const formattedKey = key.replace(/-/g, ' ')
+                                  .replace(/\b\w/g, l => l.toUpperCase());
+            alertMessage += `\n🔹 ${formattedKey}: ${value || '(vacío)'}`;
+        }
+        
+        // Mostrar alerta con estilo
+        alert(alertMessage + "\n\n✅ El formulario está listo para enviar");
+        
+        // Opcional: enviar después de 2 segundos
+        setTimeout(() => {
+            this.submit();
+        }, 20000);
         });
-    </script>
+    </script> -->
 </body>
 </html>
