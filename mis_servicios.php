@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mis Servicios</title>
     <link rel="stylesheet" href="mis_servicios.css">    
+    <script type="text/javascript">
+        function confirmacion(){
+            return confirm('¿Está seguro que desea eliminar el servicio?');
+        }
+    </script>
 </head>
 <body>
 <?php
@@ -61,13 +66,13 @@ if (mysqli_num_rows($resultado) > 0) {
                 <p><b>Localidad:</b> " . htmlspecialchars($row['localidad']) . "</p>
             </div>
             <div class='ServicioEliminar'>
-                <a href='#'><img src='Imagenes/Papelera.png' alt='papelera'></a>
+                <a href='eliminar.php?id=".$row['servicio_id']."'onclick='return confirmacion()'><img src='Imagenes/Papelera.png' alt='papelera'></a>
             </div>
         </div>";
         $contador++;
     }
 } else {
-    echo "<p class='Noservice'>¡¡No cuenta con servicios agendados!!</p>";
+    echo "<p class='Noservice'>¡¡No cuenta con servicios agendados</p>";
 }
 mysqli_close($conexion);
 ?>
